@@ -8,6 +8,5 @@ with open ( file_path, 'r',encoding='utf-8')as f:
 
 soup = bs4.BeautifulSoup(html_content, 'html.parser')
 
-anchor_tag = soup.a
-print(anchor_tag['href'])
-print(anchor_tag.attrs)
+tag = soup.find('ul', id="products")
+print(tag)
